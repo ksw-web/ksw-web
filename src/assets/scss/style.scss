@@ -1,0 +1,37 @@
+@import 'vars';
+@import 'fonts';
+@import 'global';
+
+
+.header {
+background-image: url('../images/hero.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+  // .header__container
+  &__container {
+    padding: 150px 0 120px;
+  }
+
+  // .header__title
+  &__title {
+    max-width: 786px;
+    color: $color-sec;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 52px;
+      margin-bottom: 15px;
+  }
+
+  // .header__subtitle
+  &__subtitle {
+    max-width: 786px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.title {}
+
+
+
+@import 'media';
