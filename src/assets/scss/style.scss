@@ -2,7 +2,13 @@
 @import 'fonts';
 @import 'global';
 
-
+.title {
+  color: $color-sec;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 40px;
+      /* 111.111% */
+}
 .header {
 background-image: url('../images/hero.jpg');
 background-repeat: no-repeat;
@@ -15,11 +21,9 @@ background-size: cover;
   // .header__title
   &__title {
     max-width: 786px;
-    color: $color-sec;
     font-size: 44px;
-    font-weight: 600;
     line-height: 52px;
-      margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   // .header__subtitle
@@ -30,8 +34,240 @@ background-size: cover;
   }
 }
 
+.main {
+  padding: 70px 0 90px;
+}
+
+.about {
+
+  // .about__container
+  &__container {
+    padding: 40px 32px;
+    border-radius: 16px;
+    background: #242424;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;   
+  }
+
+  // .about__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 687px;
+    column-gap: 129px;
+    row-gap: 24px;
+    padding-right: 10px;
+  }
+
+  // .about__title
+  &__title {
+
+  }
+
+  // .about__text
+  &__text {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+    /* 160% */
+  }
+
+  // .about__picture
+  &__picture {
+    flex-shrink: 0;
+  }
+
+  // .about__img
+  &__img {
+    border-radius: 8px;
+  }
+}
+
+.advantages {
+
+  // .advantages__container
+  &__container {
+    margin-bottom: 100px;
+  }
+
+  // .advantages__title
+  &__title {
+    margin-bottom: 36px;
+  }
+
+  // .advantages__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2 1fr);
+    gap: 8px;
+  }
+
+  // .advantages__item
+  &__item {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #242424;
+    padding: 24px 24px 32px;
+    &:nth-child(3) {
+        grid-row: span 2;
+        align-content: center;
+      }
+  }
+}
+
+
+.item-adv {
+
+  // .item-adv__icon
+  &__icon {
+    margin-bottom: 20px;
+  }
+
+  // .item-adv__title
+  &__title {
+    color: $color-sec;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+      /* 120% */
+  }
+
+  // .item-adv__text
+  &__text {}
+}
+
+.portfolio {
+
+  // .portfolio__container
+  &__container {}
+
+  // .portfolio__title
+  &__title {
+    margin-bottom: 36px;
+  }
+
+  // .portfolio__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  // .portfolio__item
+  &__item {
+    
+
+  }
+}
+
+.container {}
+
 .title {}
 
+.item-pf {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: #242424;
+  padding: 8px 8px 12px;
+  // .item-pf__image
+  &__image {
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
 
+  // .item-pf__title
+  &__title {
+    color: $color-sec;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  // .item-pf__button
+  &__button {
+
+  }
+}
+
+.button {
+display: inline-block;
+color: #FFF;
+padding: 8px 16px;
+border-radius: 6px;
+background: #151515;
+}
+
+.footer {
+padding: 80px 0 160px;
+  // .footer__container
+  &__container {}
+
+  // .footer__title
+  &__title {
+    margin-bottom: 36px;
+  }
+
+  // .footer__items
+  &__items {
+    padding-left: 29px;
+    display: flex;
+    gap: 60px;
+  }
+
+  // .footer__item
+  &__item {}
+
+  // .footer__link
+  &__link {
+    position: relative;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 28px;
+      /* 140% */
+  }
+}
+
+
+.footer-tel {
+  &::before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/icons/tel.svg');
+    top: 0;
+    left: -29px;
+  }
+}
+
+.footer-mail {
+  &::before {
+        position: absolute;
+        content: '';
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icons/mail.svg');
+        top: 0;
+        left: -29px;
+      }
+}
+
+.footer-tg {
+    &::before {
+        position: absolute;
+        content: '';
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icons/tg.svg');
+        top: 0;
+        left: -29px;
+      }
+}
 
 @import 'media';

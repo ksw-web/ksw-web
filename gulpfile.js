@@ -14,6 +14,7 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const rigger = require('gulp-rigger');
 const notify = require('gulp-notify');
+const svgmin = require('gulp-svgmin');
 
 const srcPath = 'src/';
 const distPath = 'dist/';
@@ -32,14 +33,16 @@ const path = {
     html: srcPath + '*.html',
     css: srcPath + 'assets/scss/*.scss',
     js: srcPath + 'assets/js/*.js',
-    images: srcPath + 'assets/images/**/*.{jpg, jpeg, png, svg, ico, gif, webp, webmanifest, xml, json}',
+    images: srcPath + 'assets/images/**/*.{jpg, jpeg, png, webp}',
+    svg: srcPath + 'assets/images/**/*.svg',
     fonts: srcPath + 'assets/fonts/**/*.{eot, woff, woff2, ttf, svg}',
   },
   watch: {
     html: srcPath + '**/*.html',
     css: srcPath + 'assets/scss/**/*.scss',
     js: srcPath + 'assets/js/**/*.js',
-    images: srcPath + 'assets/images/**/*.{jpg, jpeg, png, svg, ico, gif, webp, webmanifest, xml, json}',
+    images: srcPath + 'assets/images/**/*.{jpg, jpeg, png, webp}',
+    svg: srcPath + 'assets/images/**/*.svg',
     fonts: srcPath + 'assets/fonts/**/*.{eot, woff, woff2, ttf, svg}',
   },
   clean: './' + distPath
@@ -118,6 +121,9 @@ function js(){
 
 function images() {
   return src(path.src.images, { base: srcPath + 'assets/images/'})
+  .pipe(imagemin())
+  .pipe(dest(path.build.images))
+  .pipe(src(path.src.svg))
   .pipe(imagemin())
   .pipe(dest(path.build.images))
   .pipe(browserSync.reload({stream: true}))
