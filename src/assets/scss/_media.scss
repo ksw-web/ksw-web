@@ -1,4 +1,127 @@
-@media (max-width: 375px) {
+// Брейкпоинты
+// 1920 - стандартная ширина полотна
+// 320 - минимальная ширина полотна
+// ----
+// 1120 - пк, нетбуки, некоторые планшеты
+// 991.98 - планшеты
+// 767.98 - телефоны L 
+// 575.98 - телефоны S 
+// 479.98 - телефоны XS 
 
 
+@media (max-width: 767.98px) {
+  .advantages__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .about__container {
+    flex-direction: column;
+    gap: 36px;
 }
+}
+@media (max-width: 612.98px) {
+  .footer__items {
+      flex-direction: column;
+      gap: 32px;
+    }
+}
+ @media (max-width: 575.98px) {
+  
+    .title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    .header__title {
+      font-size: 36px;
+      line-height: 49px;
+      margin-bottom: 20px;
+    }
+    .about__text {
+      font-size: 16px;
+    }
+  
+    .advantages__items,
+    .portfolio__items {
+       grid-template-columns: 1fr;
+     }
+    .advantages__item,
+    .portfolio__item {
+      max-width: 392px;
+      }
+    .footer {
+      padding: 60px 0 100px;
+    }
+ }
+
+ @media (max-width: 376.98px) {
+  .title {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+      /* 114.286% */
+  }
+  .header__title {
+    font-size: 32px;
+  }
+  .header__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+      /* 142.857% */
+  }
+  .header__container {
+    padding: 60px 24px 40px;
+  }
+  .header__subtitle {
+    font-size: 18px;
+  }
+  .main {
+    padding: 30px 24px 50px;
+  }
+  .about__container {
+    padding: 24px 20px;
+    margin-bottom: 50px;
+  }
+  .advantages__title {
+    margin-bottom: 24px;
+  }
+  .advantages__container {
+    margin-bottom: 50px;
+  }
+  .item-adv{
+    padding: 16px 16px 20px;
+  }
+.item-adv__title {
+  font-size: 16px;
+}
+.item-adv__text {
+  font-size: 14px;
+}
+.portfolio__title {
+  margin-bottom: 24px;
+}
+.item-pf {
+  padding-bottom: 8px;
+}
+.item-pf__title {
+  font-size: 14px;
+  line-height: 20px;
+}
+.button {
+  font-size: 16px;
+  line-height: 24px;
+}
+.footer {
+  padding: 24px 24px 40px;
+}
+.footer__link {
+  font-size: 14px;
+  line-height: 24px;
+  &::before {
+    transform: translateY(-20%);
+  }
+}
+
+ }
