@@ -15,7 +15,7 @@ background-repeat: no-repeat;
 background-size: cover;
   // .header__container
   &__container {
-    padding: 150px 0 120px;
+    padding: 150px 15px 120px;
   }
 
   // .header__title
@@ -35,7 +35,7 @@ background-size: cover;
 }
 
 .main {
-  padding: 70px 0 90px;
+  padding: 70px 15px 90px;
 }
 
 .about {
@@ -205,7 +205,7 @@ background: #151515;
 }
 
 .footer {
-padding: 80px 0 160px;
+padding: 80px 15px 160px;
   // .footer__container
   &__container {}
 
