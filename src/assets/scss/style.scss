@@ -175,6 +175,7 @@ background-size: cover;
   border: 1px solid rgba(0, 0, 0, 0.05);
   background: #242424;
   padding: 8px 8px 12px;
+  transition: 0.35s;
   // .item-pf__image
   &__image {
     border-radius: 8px;
@@ -194,6 +195,9 @@ background-size: cover;
   &__button {
 
   }
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 
 .button {
@@ -202,6 +206,11 @@ color: #FFF;
 padding: 8px 16px;
 border-radius: 6px;
 background: #151515;
+transition: 0.35s;
+&:hover {
+  background: #fff;
+  color: #151515;
+}
 }
 
 .footer {
