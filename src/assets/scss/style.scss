@@ -171,6 +171,7 @@ background-size: cover;
 .title {}
 
 .item-pf {
+  position: relative;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   background: #242424;
@@ -193,10 +194,20 @@ background-size: cover;
 
   // .item-pf__button
   &__button {
-
   }
+
+    // .item-pf__link
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
   }
 }
 
@@ -206,11 +217,7 @@ color: #FFF;
 padding: 8px 16px;
 border-radius: 6px;
 background: #151515;
-transition: 0.35s;
-&:hover {
-  background: #fff;
-  color: #151515;
-}
+
 }
 
 .footer {
@@ -231,7 +238,12 @@ padding: 80px 15px 160px;
   }
 
   // .footer__item
-  &__item {}
+  &__item {
+    transition: 0.35s;
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
 
   // .footer__link
   &__link {
